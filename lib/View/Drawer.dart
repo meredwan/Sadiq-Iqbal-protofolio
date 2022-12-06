@@ -56,6 +56,58 @@ class Dreawer extends StatelessWidget {
               height: 2,
               thickness: 2,
               color: Color(0xff5B5B5B),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 20),
+              child:  Row(
+                        children: [
+                          Container(
+                            height: 35,
+                            width: 35,
+                            decoration: BoxDecoration(
+                                color: Color(0xffF48C06),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Image.asset(
+                              "images/fb.png",
+                              height: 15,
+                              width: 10,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Container(
+                            height: 35,
+                            width: 35,
+                            decoration: BoxDecoration(
+                                color: Color(0xffF48C06),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Center(
+                              child: Image.asset(
+                                "images/instagram.png",
+                                color: Colors.white,
+                                height: 13,
+                                width: 13,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Container(
+                            height: 35,
+                            width: 35,
+                            decoration: BoxDecoration(
+                                color: Color(0xffF48C06),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Image.asset(
+                              "images/twiter.png",
+                              height: 15,
+                              width: 10,
+                            ),
+                          )
+                        ],
+                      ),
             )
           ],
         ),
