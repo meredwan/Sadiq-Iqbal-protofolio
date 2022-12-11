@@ -23,7 +23,7 @@ class DashBoard extends StatelessWidget {
         ),
         body: Container(
           child: Column(
-            children: [
+            children: [ 
               const Expanded(
                 child: StaggedView(),
               ),

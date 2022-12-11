@@ -23,6 +23,7 @@ class MyBlog extends StatelessWidget {
       ),
       body: Container(
         child: ListView(
+          padding: EdgeInsets.only(bottom: 15),
           children: [
             Column(
               children: [

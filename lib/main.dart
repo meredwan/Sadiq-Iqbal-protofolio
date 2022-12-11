@@ -4,6 +4,7 @@ import 'package:sadiq_iqbal/View/AboutMe.dart';
 import 'package:sadiq_iqbal/View/Contact.dart';
 import 'package:sadiq_iqbal/View/Dashboard.dart';
 import 'package:sadiq_iqbal/View/DashboradList.dart';
+import 'package:sadiq_iqbal/View/Drawer.dart';
 import 'package:sadiq_iqbal/View/Gallery.dart';
 import 'package:sadiq_iqbal/View/MyBlog.dart';
 import 'package:sadiq_iqbal/View/MyBlogDetails.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:  MyBlogDetails(),
+      home:  SplashScreen(),
     );
   }
 }

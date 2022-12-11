@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:sadiq_iqbal/View/Drawer.dart';
@@ -30,8 +31,7 @@ class MyAchivement extends StatelessWidget {
               return Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(
-                        top: 12),
+                    padding: const EdgeInsets.only(top: 12),
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -64,7 +64,8 @@ class MyAchivement extends StatelessWidget {
                                   itemBuilder: ((context, index) {
                                     return Container(
                                       decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(5)),
+                                          borderRadius:
+                                              BorderRadius.circular(5)),
                                       child: Row(children: [
                                         Column(
                                           children: [
@@ -111,7 +112,17 @@ class MyAchivement extends StatelessWidget {
                         ),
                       ),
                     ),
-                  )
+                  ),
+                  const DottedLine(
+                      //  direction: Axis.horizontal,
+                      // lineLength: double.infinity,
+                      // lineThickness: 2.0,
+
+                      // dashGapLength: 10.0,
+                      // dashGapColor: Colors.transparent,
+
+                      // dashGapRadius: 0.0,
+                      )
                 ],
               );
             },

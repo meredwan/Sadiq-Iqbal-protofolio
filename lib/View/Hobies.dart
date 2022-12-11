@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Hobies extends StatelessWidget {
   const Hobies({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 15,),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
+          Padding(
+            padding: const EdgeInsets.only(left: 15),
             child: Row(
               children: [
                 ElevatedButton(
-                  onPressed: () {},
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                        top: 8, bottom: 8, left: 15, right: 15),
-                    child: Text(
+                  onPressed: () {
+                    print("Pressed");
+                  },
+                  child: const Padding(
+                    padding:
+                        EdgeInsets.only(top: 8, bottom: 8, left: 15, right: 15),
+                    child: const Text(
                       "Book reading",
                       style: TextStyle(
                           fontFamily: "Outfit",
@@ -36,7 +37,7 @@ class Hobies extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 ElevatedButton(
@@ -44,7 +45,7 @@ class Hobies extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(
                         top: 8, bottom: 8, left: 15, right: 15),
-                    child: Text(
+                    child: const Text(
                       "Watching movie",
                       style: TextStyle(
                           fontFamily: "Outfit",
@@ -60,7 +61,7 @@ class Hobies extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 ElevatedButton(
@@ -68,6 +69,30 @@ class Hobies extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(
                         top: 8, bottom: 8, left: 15, right: 15),
+                    child: const Text(
+                      "Watching movie",
+                      style: TextStyle(
+                          fontFamily: "Outfit",
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xff5B5B5B),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Padding(
+                    padding:
+                        EdgeInsets.only(top: 8, bottom: 8, left: 15, right: 15),
                     child: Text(
                       "Travelling",
                       style: TextStyle(
@@ -84,21 +109,21 @@ class Hobies extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
               ],
             ),
           ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 15),
             child: Row(
               children: [
                 ElevatedButton(
                   onPressed: () {},
                   child: Padding(
                     padding: const EdgeInsets.only(
-                        top: 8, bottom: 8, left: 15, right: 15),
+                        top: 8, bottom: 10, left: 8, right: 15),
                     child: Text(
                       "Swimming",
                       style: TextStyle(
@@ -115,7 +140,7 @@ class Hobies extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 ElevatedButton(
@@ -139,7 +164,7 @@ class Hobies extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 ElevatedButton(

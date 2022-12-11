@@ -82,7 +82,7 @@ class Contact extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: TextField(
                     decoration: InputDecoration(
-                      labelText: "Your fullname",
+                      labelText: "Your full Name",
                       labelStyle: const TextStyle(
                           fontFamily: "Outfit",
                           fontSize: 16,
@@ -174,7 +174,8 @@ class Contact extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: TextField(
-                    maxLines: 5,
+                    maxLines: 10,
+                    minLines:6,
                     decoration: InputDecoration(
                       labelText: "Type message",
                       labelStyle: const TextStyle(
@@ -190,7 +191,8 @@ class Contact extends StatelessWidget {
                   height: 15,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                   child: Container(
                     height: 60,
                     width: double.infinity,
