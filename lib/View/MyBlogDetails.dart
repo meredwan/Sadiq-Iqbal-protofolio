@@ -27,7 +27,7 @@ class MyBlogDetails extends StatelessWidget {
         body: Container(
           padding:
               const EdgeInsets.only(top: 30, left: 20, right: 20, bottom: 15),
-          child: Column(
+          child: ListView(
             children: [
               Expanded(
                 child: GridView.count(
