@@ -24,15 +24,14 @@ class MyBlogDetails extends StatelessWidget {
                 color: Colors.white),
           ),
         ),
-        body: Container(
-          padding:
-              const EdgeInsets.only(top: 30, left: 20, right: 20, bottom: 15),
-          child: ListView(
-            children: [
-              Expanded(
-                child: GridView.count(
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              children: [
+                GridView.count(
                   // primary: true,
-                 physics: ScrollPhysics(),
+                 physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   crossAxisCount: 2,
                   crossAxisSpacing: 20,
@@ -67,119 +66,118 @@ class MyBlogDetails extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-              Expanded(
-                  child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.only(top: 10),
-                    child: Text(
-                      "Feb 02nd, 2018",
-                      style: TextStyle(
-                          fontFamily: "Outfit",
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  const Text(
-                    "Computer Technology in Education Platform.",
-                    style: TextStyle(
-                        fontFamily: "Outfit",
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(
-                    height: 11,
-                  ),
-                  const Text(
-                    "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. eleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia",
-                    textAlign: TextAlign.justify,
-                    style: TextStyle(
-                        fontFamily: "Outfit",
-                        fontSize: 16,
-                        fontWeight: FontWeight.w300),
-                  ),
-                  const SizedBox(
-                    height: 11,
-                  ),
-                  const Text(
-                    "Iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. eleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia",
-                    textAlign: TextAlign.justify,
-                    style: TextStyle(
-                        fontFamily: "Outfit",
-                        fontSize: 16,
-                        fontWeight: FontWeight.w300),
-                  ),
-                  const SizedBox(
-                    height: 19,
-                  ),
-                  const Text(
-                    "Share this Blog",
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                const Padding(
+                  padding: EdgeInsets.only(top: 10),
+                  child: Text(
+                    "Feb 02nd, 2018",
                     style: TextStyle(
                         fontFamily: "Outfit",
                         fontSize: 12,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w300),
+                        fontWeight: FontWeight.w400),
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        height: 35,
-                        width: 35,
-                        decoration: BoxDecoration(
-                            color: Color(0xffF48C06),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Image.asset(
-                          "images/fb.png",
-                          height: 15,
-                          width: 10,
-                        ),
-                      ),
-                      const SizedBox(
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Text(
+                  "Computer Technology in Education Platform.",
+                  style: TextStyle(
+                      fontFamily: "Outfit",
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(
+                  height: 11,
+                ),
+                const Text(
+                  "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. eleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia",
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                      fontFamily: "Outfit",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w300),
+                ),
+                const SizedBox(
+                  height: 11,
+                ),
+                const Text(
+                  "Iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. eleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia",
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                      fontFamily: "Outfit",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w300),
+                ),
+                const SizedBox(
+                  height: 19,
+                ),
+                const Text(
+                  "Share this Blog",
+                  style: TextStyle(
+                      fontFamily: "Outfit",
+                      fontSize: 12,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w300),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                          color: Color(0xffF48C06),
+                          borderRadius: BorderRadius.circular(50)),
+                      child: Image.asset(
+                        "images/fb.png",
+                        height: 15,
                         width: 10,
                       ),
-                      Container(
-                        height: 35,
-                        width: 35,
-                        decoration: BoxDecoration(
-                            color: Color(0xffF48C06),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Center(
-                          child: Image.asset(
-                            "images/instagram.png",
-                            color: Colors.white,
-                            height: 13,
-                            width: 13,
-                          ),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                          color: Color(0xffF48C06),
+                          borderRadius: BorderRadius.circular(50)),
+                      child: Center(
+                        child: Image.asset(
+                          "images/instagram.png",
+                          color: Colors.white,
+                          height: 13,
+                          width: 13,
                         ),
                       ),
-                      const SizedBox(
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                          color: Color(0xffF48C06),
+                          borderRadius: BorderRadius.circular(50)),
+                      child: Image.asset(
+                        "images/twiter.png",
+                        height: 15,
                         width: 10,
                       ),
-                      Container(
-                        height: 35,
-                        width: 35,
-                        decoration: BoxDecoration(
-                            color: Color(0xffF48C06),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Image.asset(
-                          "images/twiter.png",
-                          height: 15,
-                          width: 10,
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ))
-            ],
+                    )
+                  ],
+                )
+                  ],
+                )
+              ],
+            ),
           ),
         ),
         drawer: const Dreawer(),
