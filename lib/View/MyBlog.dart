@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:sadiq_iqbal/View/Drawer.dart';
+import 'package:sadiq_iqbal/View/MyBlogDetails.dart';
 
 class MyBlog extends StatelessWidget {
   const MyBlog({Key? key}) : super(key: key);
@@ -101,7 +102,9 @@ class MyBlog extends StatelessWidget {
                                   height: 15,
                                 ),
                                 ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MyBlogDetails()));
+                                  },
                                   child: const Text("Read more"),
                                   style: ElevatedButton.styleFrom(
                                     elevation: 3,

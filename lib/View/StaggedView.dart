@@ -1,6 +1,12 @@
+// ignore_for_file: sort_child_properties_last
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:sadiq_iqbal/View/AboutMe.dart';
+import 'package:sadiq_iqbal/View/Contact.dart';
+import 'package:sadiq_iqbal/View/MyResearch.dart';
+import 'package:sadiq_iqbal/View/Schedule.dart';
 
 class StaggedView extends StatelessWidget {
   const StaggedView({Key? key}) : super(key: key);
@@ -10,17 +16,17 @@ class StaggedView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.only(
-          top: 32,  left: 20, right: 20
-          ),
-          child: Container(
-            child: GridView(
-              // ignore: sort_child_properties_last
-              children: [
-                Container(
+          padding:const  EdgeInsets.only(top: 32, left: 20, right: 20),
+          child:GridView( 
+            children:  [
+              GestureDetector(
+                onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutMe()));
+                },
+                child: Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: const Color(0xffFFEFDA),
+                      color:  const Color(0xffFFEFDA),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey.withOpacity(0.5),
@@ -52,7 +58,12 @@ class StaggedView extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>MyReserach()));
+                },
+                child: Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: const Color(0xffFFEFDA),
@@ -87,7 +98,12 @@ class StaggedView extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Schedule()));
+                },
+                child: Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: const Color(0xffFFEFDA),
@@ -122,7 +138,13 @@ class StaggedView extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Contact()));
+                },
+                child: Container(
+                
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: const Color(0xffFFEFDA),
@@ -157,10 +179,10 @@ class StaggedView extends StatelessWidget {
                     ],
                   ),
                 ),
-              ],
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, mainAxisSpacing: 12, crossAxisSpacing: 12),
-            ),
+              ),
+            ],
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2, mainAxisSpacing: 12, crossAxisSpacing: 12),
           ),
         ),
       ),

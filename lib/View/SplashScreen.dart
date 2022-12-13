@@ -1,11 +1,34 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:sadiq_iqbal/View/Dashboard.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    startTimer();
+  }
+
+  startTimer() async {
+    var duration = const Duration(seconds: 3);
+    return new Timer(duration, LoginRoute);
+  }
+
+  LoginRoute() {
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => DashBoard()));
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffF48C06),
@@ -35,11 +58,11 @@ class SplashScreen extends StatelessWidget {
                 width: 134,
               ),
             ),
-             Positioned(
+            Positioned(
               height: 64,
               width: 64,
               left: 25,
-             bottom: 20,
+              bottom: 20,
               child: Image.asset("images/circul.png"),
             ),
             Positioned(

@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:sadiq_iqbal/MyAchivement.dart';
+import 'package:sadiq_iqbal/View/AboutMe.dart';
+import 'package:sadiq_iqbal/View/Contact.dart';
+import 'package:sadiq_iqbal/View/Dashboard.dart';
+import 'package:sadiq_iqbal/View/Gallery.dart';
+import 'package:sadiq_iqbal/View/MyBlog.dart';
+import 'package:sadiq_iqbal/View/MyResearch.dart';
+import 'package:sadiq_iqbal/View/Schedule.dart';
 
 class Dreawer extends StatelessWidget {
   const Dreawer({Key? key}) : super(key: key);
@@ -54,7 +62,25 @@ class Dreawer extends StatelessWidget {
               color: Color(0xff5B5B5B),
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>DashBoard()));
+              },
+              title: const Text(
+                "Dashboard",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: "Outfit",
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutMe()));
+              },
               title: const Text(
                 "About",
                 style: TextStyle(
@@ -68,7 +94,9 @@ class Dreawer extends StatelessWidget {
               height: 10,
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>MyReserach()));
+              },
               title: const Text(
                 "Research",
                 style: TextStyle(
@@ -82,7 +110,9 @@ class Dreawer extends StatelessWidget {
               height: 27,
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Schedule()));
+              },
               title: const Text(
                 "Schedule",
                 style: TextStyle(
@@ -96,7 +126,9 @@ class Dreawer extends StatelessWidget {
               height: 27,
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>MyAchivement()));
+              },
               title: const Text(
                 "Achivement",
                 style: TextStyle(
@@ -110,7 +142,9 @@ class Dreawer extends StatelessWidget {
               height: 27,
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Gallery()));
+              },
               title: const Text(
                 "Gallery",
                 style: TextStyle(
@@ -124,7 +158,9 @@ class Dreawer extends StatelessWidget {
               height: 27,
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>MyBlog()));
+              },
               title: const Text(
                 "Blog",
                 style: TextStyle(
@@ -138,7 +174,9 @@ class Dreawer extends StatelessWidget {
               height: 15,
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Contact()));
+              },
               title: const Text(
                 "Contact",
                 style: TextStyle(
