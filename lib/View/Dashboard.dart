@@ -21,46 +21,39 @@ class DashBoard extends StatelessWidget {
                 fontFamily: "Outfit", fontSize: 16, color: Colors.white),
           ),
         ),
-        body: Container(
+        body: SingleChildScrollView(
           child: Column(
-            children: [ 
-              const Expanded(
-                child: StaggedView(),
-              ),
-              Expanded(
-                child: Container(
-                  alignment: Alignment.topLeft,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 23, vertical: 20),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              "My Recent Activities",
-                              style: TextStyle(
-                                  fontFamily: "Outfit",
-                                  fontSize: 16,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w400),
-                            ),
-                          ],
-                        ),
+            children: [
+              StaggedView(),
+              Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 23, vertical: 20),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            "My Recent Activities",
+                            style: TextStyle(
+                                fontFamily: "Outfit",
+                                fontSize: 16,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ],
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      const Expanded(
-                        child: Padding(
-                          padding: EdgeInsets.only(top: 3),
-                          child: DashboardList(),
-                        ),
-                      )
-                    ],
-                  ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 3),
+                      child: DashboardList(),
+                    )
+                  ],
                 ),
               )
             ],

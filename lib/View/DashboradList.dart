@@ -10,6 +10,7 @@ class DashboardList extends StatelessWidget {
     return ListView.builder(
       physics: NeverScrollableScrollPhysics(),
       itemCount: 7,
+      shrinkWrap: true,
       itemBuilder: (context, index) {
         return Container(
             child: Column(
